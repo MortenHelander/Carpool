@@ -4,24 +4,104 @@ body {
 header {
     display: grid;
     grid-template-areas:
-            "burgermenu alle-ruter registrering logo mine-ruter right-div";
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;;
-    height: 100px;
+            "burgermenu logo login";
+    grid-template-columns: 1fr 1fr 1fr;;
+    height: auto;
     justify-content: center;
-}
+    align-items: center;
 
+}
 #burgermenu {
     grid-area: burgermenu;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 #logo {
     grid-area: logo;
     justify-self: center;
+
 }
 
-#right-div {
-    grid-area: right-div;
+#login {
+    grid-area: login;
+    cursor: pointer;
+    justify-content: right;
+    align-items: center;
+    justify-self: right;
 }
+
+.off-screen-login {
+    background-color: rgb(0,56,167,0.7);;
+    border:  rgb(34, 37, 49);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    height: 65vh;
+    width: 100%;
+    max-width: 375px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    margin-left: 25px;
+    margin-top: 170px;
+    margin-bottom: 500px;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    transition: .3s ease;
+    line-height: 120px;
+    z-index: 100;
+}
+
+.off-screen-login-active{
+    right: 0;
+} 
+
+.off-screen-menu {
+    background-color: rgb(0,56,167,0.7);;
+    border:  rgb(34, 37, 49);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    height: 65vh;
+    width: 100%;
+    max-width: 375px;
+    position: fixed;
+    top: 0;
+    left: -900px;
+    margin-left: 25px;
+    margin-top: 170px;
+    margin-bottom: 500px;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    transition: .3s ease;
+    line-height: 120px;
+    z-index: 100;
+}
+
+.menu-text-style{
+    text-decoration: none;
+    color: #F7EDCA;
+    text-align: left;
+    margin-left: 10px;
+
+
+}
+
+.off-screen-menu-active{
+    left: 0;
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+}
+
+#menu-style {
+    color: #F7EDCA;
+}
+
 
 #forsideTekst{
     top: 30px;
@@ -100,6 +180,8 @@ footer {
     background-color: #0038A7;
     opacity: 70%;
     color: white;
+    z-index: 50;
 }
+
 
 
